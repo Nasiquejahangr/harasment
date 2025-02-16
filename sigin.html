@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sig-in</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      @keyframes typing {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+
+      @keyframes blink {
+        50% {
+          border-color: transparent;
+        }
+      }
+
+      h1 {
+        animation: typing 4s steps(10, end), blink 0.96s step-end; /* Typing effect */
+        overflow: hidden; /* Ensures the text is hidden until animated */
+        white-space: nowrap; /* Prevents text wrapping */
+        border-right: 2px solid rgba(0, 0, 0, 0.486); /* Cursor effect */
+        width: 10ch; /* Adjust based on text length */
+        text-align: center;
+        font-size: 35px;
+      }
+      body {
+        background-color: white; /* Set background color to white */
+        font-family: Arial, sans-serif; /* Use a clean font */
+        display: flex; /* Center the form */
+        justify-content: center; /* Center horizontally */
+        align-items: center; /* Center vertically */
+        height: 100vh; /* Full viewport height */
+        padding: 20px; /* Add uniform padding */
+      }
+      #signInForm {
+        background-color: #f9f9f9; /* Light gray background for the form */
+        padding: 25px; /* Add padding */
+        border-radius: 5px; /* Rounded corners */
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      }
+      button {
+        background-color: black;
+        color: white;
+        border: none;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 5px;
+        width: 30%;
+        display: block; /* Center the button */
+        margin: 0 auto; /* Center the button */
+        margin-bottom: 9px;
+      }
+      button:hover {
+        opacity: 0.8;
+      }
+      input {
+        width: 100%; /* Full width inputs */
+        padding: 10px; /* Add padding */
+        margin: 10px 0; /* Space between inputs */
+        border: 1px solid #ccc; /* Light border */
+        border-radius: 5px; /* Rounded corners */
+      }
+      .back-to-login {
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        text-decoration: none;
+      }
+      .back-to-login a {
+        background-color: rgb(253, 249, 249);
+        font-size: 15px;
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="signInForm" class="hidden">
+      <h1>Sign In</h1>
+      <form id="signIn">
+        <input type="text" placeholder="Email" required />
+        <input type="password" placeholder="Password" required />
+        <button type="submit">Sign-In</button>
+      </form>
+      <p class="back-to-login">
+        <a href="#" id="toggleLogin"
+          >Back to -
+          <span>
+            <a
+              style="text-decoration: underline; font-weight: bold"
+              href="index.html"
+              >Login
+            </a>
+          </span>
+        </a>
+      </p>
+    </div>
+  </body>
+</html>
